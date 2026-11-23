@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abderrahim HAJRI — Ingénieur &amp; Consultant Systèmes, Réseaux &amp; Cloud Microsoft</title>
+  <meta name="description" content="Portfolio &amp; CV interactif d'Abderrahim HAJRI — Ingénieur Systèmes, Réseaux &amp; Cloud Microsoft (7+ ans d'expérience, MS-102 Expert, MS-700, Huawei HCSP, VMware vSphere 8, Hyper-V, Veeam, SCCM/MECM, FortiGate)." />
+  <!-- Open Graph / LinkedIn / WhatsApp Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Abderrahim HAJRI — Ingénieur &amp; Consultant Systèmes, Réseaux &amp; Cloud Microsoft" />
+  <meta property="og:description" content="7+ ans d'expérience · Microsoft 365 Expert (MS-102) · Azure · VMware vSphere 8 · Hyper-V · Veeam · SCCM/MECM · FortiGate · Remote (Paris) &amp; Mobilité internationale." />
+  <meta property="og:image" content="assets/og-banner.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Abderrahim HAJRI — Systems, Network &amp; Microsoft Cloud Engineer" />
+  <meta name="twitter:image" content="assets/og-banner.png" />
+  <!-- Custom SVG Favicon (AH) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%232563eb'/%3E%3Cstop offset='100%25' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%23091B2E'/%3E%3Crect x='2' y='2' width='60' height='60' rx='12' fill='none' stroke='url(%23g)' stroke-width='3'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='Arial,sans-serif' font-weight='700' font-size='26'%3EAH%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- Animated Network Topology Background -->
+  <canvas id="network-bg" aria-hidden="true"></canvas>
+  <div class="aurora-layer" aria-hidden="true">
+    <div class="aurora-orb orb-1"></div>
+    <div class="aurora-orb orb-2"></div>
+    <div class="aurora-orb orb-3"></div>
+  </div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner container">
+      <a href="#hero" class="brand">
+        <span class="brand-dot"></span>
+        <span>Abderrahim <strong>HAJRI</strong></span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" data-i18n="nav_about">Profil</a>
+        <a href="#architectures" data-i18n="nav_arch">Architectures</a>
+        <a href="#skills" data-i18n="nav_skills">Compétences</a>
+        <a href="#experience" data-i18n="nav_exp">Expériences</a>
+        <a href="#training" data-i18n="nav_train">Formations</a>
+        <a href="#certifications" data-i18n="nav_certs">Certifications</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="pill-btn" id="lang-toggle" title="Switch Language">FR / EN</button>
+        <button class="icon-btn" id="theme-toggle" title="Toggle Dark/Light Theme" aria-label="Theme">
+          <svg id="theme-icon-sun" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg id="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="pill-btn" id="open-cv-preview" data-i18n="nav_preview">Aperçu CV</button>
+        <a href="assets/CV_Abderrahim_Hajri_FR.pdf" download id="nav-cv-btn" class="btn-primary-sm" data-i18n="nav_dl">PDF</a>
+        <button class="menu-btn" id="menu-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero container">
+      <div class="hero-content reveal">
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          <span data-i18n="hero_status">Disponible · Remote (Paris) &amp; Mobilité Internationale</span>
+        </div>
+
+        <h1 class="hero-title">
+          Abderrahim <span class="gradient-text">HAJRI</span>
+        </h1>
+
+        <div class="hero-role-wrap">
+          <span class="hero-role-prefix" data-i18n="hero_prefix">Expert en</span>
+          <span class="typed-role" id="typed-role">Infrastructure Microsoft &amp; Cloud Azure</span>
+          <span class="cursor">|</span>
+        </div>
+
+        <p class="hero-desc" data-i18n="hero_desc">
+          Ingénieur en Génie Informatique (Réseaux &amp; Systèmes) avec <strong>7+ ans d'expérience</strong> en architecture, migration, haute disponibilité et maintien en condition opérationnelle (MCO / MCS). Certifié <strong>Microsoft 365 Administrator Expert (MS-102)</strong> &amp; <strong>Huawei HCSP</strong>.
+        </p>
+
+        <div class="hero-cta">
+          <a href="assets/CV_Abderrahim_Hajri_FR.pdf" download id="hero-cv-link" class="btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-i18n="hero_btn_cv">Télécharger CV (PDF)</span>
+          </a>
+          <button type="button" id="hero-preview-btn" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span data-i18n="hero_btn_preview">Aperçu CV</span>
+          </button>
+          <a href="#contact" class="btn-secondary" data-i18n="hero_btn_contact">Me contacter</a>
+          <a href="https://www.linkedin.com/in/hajri-abderrahim-249916155" target="_blank" rel="noopener" class="btn-ghost">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+
+        <!-- KPI Counters -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-num"><span class="counter" data-target="7">0</span>+</div>
+            <div class="kpi-label" data-i18n="kpi_years">Années d'expérience IT</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-num"><span class="counter" data-target="10">0</span>+</div>
+            <div class="kpi-label" data-i18n="kpi_projects">Projets critiques déployés</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-num"><span class="counter" data-target="15">0</span>+</div>
+            <div class="kpi-label" data-i18n="kpi_courses">Cursus techniques animés</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-num"><span class="counter" data-target="5">0</span></div>
+            <div class="kpi-label" data-i18n="kpi_certs">Certifications reconnues</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="avatar-ring">
+          <div class="ring-spin"></div>
+          <img src="assets/photo.jpg" alt="Abderrahim HAJRI" class="hero-photo" />
+          <div class="floating-chip chip-1">
+            <span class="chip-icon">☁️</span>
+            <span>Azure &amp; M365 Expert</span>
+          </div>
+          <div class="floating-chip chip-2">
+            <span class="chip-icon">🛡️</span>
+            <span>FortiGate · Veeam · HA</span>
+          </div>
+          <div class="floating-chip chip-3">
+            <span class="chip-icon">⚙️</span>
+            <span>VMware v8 · Hyper-V · SCCM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About + Interactive SysAdmin Console -->
+    <section id="about" class="section container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow" data-i18n="about_eyebrow">À PROPOS</span>
+        <h2 class="section-title" data-i18n="about_title">Double expertise : Architecte Infrastructure &amp; Formateur Certifié</h2>
+      </div>
+      <div class="about-grid">
+        <div class="glass-card spotlight reveal">
+          <div class="card-icon">🏗️</div>
+          <h3 data-i18n="about_c1_t">Architecture &amp; MCO / MCS</h3>
+          <p data-i18n="about_c1_d">Conception, refonte et maintien en condition opérationnelle d'environnements Windows Server (2012–2022), Active Directory multi-sites, clusters VMware vSphere 8 et Hyper-V avec stockage SAN HPE MSA / iSCSI.</p>
+        </div>
+        <div class="glass-card spotlight reveal">
+          <div class="card-icon">☁️</div>
+          <h3 data-i18n="about_c2_t">Cloud Microsoft &amp; Continuité (PRA)</h3>
+          <p data-i18n="about_c2_d">Déploiement hybride Microsoft Azure (Entra ID, VNet, Storage, Load Balancer), Microsoft 365 / Exchange Online, et plans de reprise d'activité multi-sites basés sur Veeam Backup &amp; Replication.</p>
+        </div>
+        <div class="glass-card spotlight reveal">
+          <div class="card-icon">🎓</div>
+          <h3 data-i18n="about_c3_t">Conseil Remote &amp; Transmission</h3>
+          <p data-i18n="about_c3_d">Consultant à distance pour des clients parisiens (Sarra-Consulting) et formateur technique sur plus de 15 cursus officiels (Azure, M365, Windows Server, SCCM/MECM, Hyper-V, Veeam, PRTG, SCOM).</p>
+        </div>
+      </div>
+
+      <!-- Interactive PowerShell / SysAdmin Console -->
+      <div class="glass-card terminal-card reveal">
+        <div class="terminal-bar">
+          <div class="term-dots"><span></span><span></span><span></span></div>
+          <div class="term-title">PS C:\Users\Abderrahim.Hajri&gt; — SysAdmin Interactive Console</div>
+          <div class="term-quick-btns">
+            <button type="button" class="term-cmd-btn" data-cmd="Get-Profile">Get-Profile</button>
+            <button type="button" class="term-cmd-btn" data-cmd="Get-Certifications">Get-Certifications</button>
+            <button type="button" class="term-cmd-btn" data-cmd="Get-Stack">Get-Stack</button>
+            <button type="button" class="term-cmd-btn" data-cmd="Get-Contact">Get-Contact</button>
+            <button type="button" class="term-cmd-btn" data-cmd="clear">Clear</button>
+          </div>
+        </div>
+        <div class="terminal-body" id="terminal-output">
+          <div class="term-line"><span class="prompt">PS&gt;</span> <span class="cmd-txt">Get-Profile</span></div>
+          <div class="term-res">Name: Abderrahim HAJRI | Role: Ingénieur Systèmes, Réseaux &amp; Cloud Microsoft | Exp: 7+ ans | Current: Sarra-Consulting (Paris · Remote)</div>
+        </div>
+        <form class="terminal-input-row" id="terminal-form">
+          <span class="prompt">PS&gt;</span>
+          <input type="text" id="terminal-input" autocomplete="off" placeholder="Tapez une commande (help, Get-Profile, Get-Certifications, Get-Stack, Get-Contact, clear)..." data-ph-fr="Tapez une commande (help, Get-Profile, Get-Certifications, Get-Stack, Get-Contact, clear)..." data-ph-en="Type a command (help, Get-Profile, Get-Certifications, Get-Stack, Get-Contact, clear)..." />
+        </form>
+      </div>
+    </section>
+
+    <!-- Architecture Case Studies with Visual Diagrams -->
+    <section id="architectures" class="section container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow" data-i18n="arch_eyebrow">ÉTUDES DE CAS &amp; SCHÉMAS</span>
+        <h2 class="section-title" data-i18n="arch_title">Architectures IT Déployées (cliquez pour voir le schéma)</h2>
+      </div>
+
+      <div class="arch-grid">
+        <button type="button" class="glass-card spotlight arch-card reveal" data-arch="sergaz">
+          <div class="arch-top">
+            <span class="arch-client">Sergaz · 2024</span>
+            <span class="arch-arrow">↗</span>
+          </div>
+          <h3 data-i18n="arch1_t">PRA Multi-sites &amp; Réplication Veeam</h3>
+          <p data-i18n="arch1_d">Serveurs HPE ProLiant DL380 Gen10+, Windows Server 2022, Veeam B&amp;R, WAN Accelerator, Veeam ONE &amp; Enterprise Manager.</p>
+          <span class="arch-cta" data-i18n="arch_view">Voir le schéma d'architecture →</span>
+        </button>
+
+        <button type="button" class="glass-card spotlight arch-card reveal" data-arch="pharmacie">
+          <div class="arch-top">
+            <span class="arch-client">Pharmacie Centrale · 2024</span>
+            <span class="arch-arrow">↗</span>
+          </div>
+          <h3 data-i18n="arch2_t">Cluster Haute Disponibilité VMware vSphere 8</h3>
+          <p data-i18n="arch2_d">Baie SAN HPE MSA 2060, switchs SAN, ESXi, vCenter v8 et migration de production sans coupure.</p>
+          <span class="arch-cta" data-i18n="arch_view">Voir le schéma d'architecture →</span>
+        </button>
+
+        <button type="button" class="glass-card spotlight arch-card reveal" data-arch="hygiene">
+          <div class="arch-top">
+            <span class="arch-client">Groupe Hygiène Industrielle</span>
+            <span class="arch-arrow">↗</span>
+          </div>
+          <h3 data-i18n="arch3_t">Refonte AD 2019, P2V &amp; Exchange Hybride</h3>
+          <p data-i18n="arch3_d">Migration AD 2008 → 2019 (DFSR), Hyper-V 2019, conversion P2V de 8 serveurs physiques et messagerie Exchange / M365.</p>
+          <span class="arch-cta" data-i18n="arch_view">Voir le schéma d'architecture →</span>
+        </button>
+
+        <button type="button" class="glass-card spotlight arch-card reveal" data-arch="vacpa">
+          <div class="arch-top">
+            <span class="arch-client">VACPA &amp; Min. Environnement</span>
+            <span class="arch-arrow">↗</span>
+          </div>
+          <h3 data-i18n="arch4_t">Cluster Hyper-V Bi-nœuds &amp; Stockage iSCSI</h3>
+          <p data-i18n="arch4_d">Clustering de basculement Windows, MPIO, Volumes Partagés de Cluster (CSV), Quorum et Live Migration.</p>
+          <span class="arch-cta" data-i18n="arch_view">Voir le schéma d'architecture →</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Skills Section with Filter -->
+    <section id="skills" class="section container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow" data-i18n="skills_eyebrow">STACK TECHNIQUE</span>
+        <h2 class="section-title" data-i18n="skills_title">Compétences &amp; Technologies Maîtrisées</h2>
+      </div>
+
+      <div class="filter-tabs reveal" id="skill-filters">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Toutes</button>
+        <button class="filter-btn" data-filter="cloud" data-i18n="filter_cloud">Cloud &amp; M365</button>
+        <button class="filter-btn" data-filter="systems" data-i18n="filter_sys">Systèmes &amp; Parc</button>
+        <button class="filter-btn" data-filter="virt" data-i18n="filter_virt">Virtualisation &amp; PRA</button>
+        <button class="filter-btn" data-filter="sec" data-i18n="filter_sec">Réseaux &amp; Sécurité</button>
+      </div>
+
+      <div class="skills-grid" id="skills-grid">
+        <div class="glass-card spotlight skill-card reveal" data-cat="cloud">
+          <div class="skill-head">
+            <h3 data-i18n="sk1_t">Microsoft Azure &amp; Cloud</h3>
+            <span class="skill-tag">Cloud</span>
+          </div>
+          <div class="skill-chips">
+            <span>Entra ID / Azure AD</span><span>Azure AD Connect</span><span>RBAC</span><span>Azure VMs</span><span>VNet &amp; Peering</span><span>NSG</span><span>VPN Gateway</span><span>Azure Load Balancer</span><span>Azure DNS</span><span>Azure Storage &amp; File Sync</span>
+          </div>
+        </div>
+
+        <div class="glass-card spotlight skill-card reveal" data-cat="cloud">
+          <div class="skill-head">
+            <h3 data-i18n="sk2_t">Microsoft 365 &amp; Messagerie</h3>
+            <span class="skill-tag">M365</span>
+          </div>
+          <div class="skill-chips">
+            <span>Microsoft 365 (MS-102)</span><span>Microsoft Teams (MS-700)</span><span>Exchange Server 2019</span><span>Exchange Hybride</span><span>Identité &amp; Sécurité M365</span>
+          </div>
+        </div>
+
+        <div class="glass-card spotlight skill-card reveal" data-cat="systems">
+          <div class="skill-head">
+            <h3 data-i18n="sk3_t">Systèmes &amp; Annuaire Active Directory</h3>
+            <span class="skill-tag">OS &amp; AD</span>
+          </div>
+          <div class="skill-chips">
+            <span>Windows Server 2012–2022</span><span>Windows 10 / 11</span><span>AD DS &amp; AD FS</span><span>FSMO &amp; DFSR</span><span>RODC</span><span>DNS &amp; DHCP HA</span><span>GPO</span><span>IIS &amp; KMS</span><span>RDS / RemoteApp / App-V</span><span>Linux Ubuntu Server</span>
+          </div>
+        </div>
+
+        <div class="glass-card spotlight skill-card reveal" data-cat="systems">
+          <div class="skill-head">
+            <h3 data-i18n="sk4_t">Gestion de Parc &amp; Déploiement</h3>
+            <span class="skill-tag">Endpoint</span>
+          </div>
+          <div class="skill-chips">
+            <span>SCCM / MECM</span><span>MDT</span><span>WDS</span><span>WSUS</span><span>Masters WIM</span><span>Télédistribution</span><span>Inventaires &amp; Patching</span>
+          </div>
+        </div>
+
+        <div class="glass-card spotlight skill-card reveal" data-cat="virt">
+          <div class="skill-head">
+            <h3 data-i18n="sk5_t">Virtualisation, Serveurs &amp; Stockage</h3>
+            <span class="skill-tag">Compute</span>
+          </div>
+          <div class="skill-chips">
+            <span>VMware vSphere 8</span><span>ESXi &amp; vCenter</span><span>Hyper-V Failover Cluster</span><span>Live Migration</span><span>Réplication VM</span><span>CSV &amp; MPIO / iSCSI</span><span>HPE ProLiant DL380 Gen10+</span><span>Baie SAN HPE MSA 2060</span><span>RAID &amp; Switchs SAN</span>
+          </div>
+        </div>
+
+        <div class="glass-card spotlight skill-card reveal" data-cat="virt">
+          <div class="skill-head">
+            <h3 data-i18n="sk6_t">Sauvegarde &amp; Continuité (PRA/PCA)</h3>
+            <span class="skill-tag">Backup</span>
+          </div>
+          <div class="skill-chips">
+            <span>Veeam Backup &amp; Replication</span><span>Veeam ONE</span><span>Veeam Enterprise Manager</span><span>WAN Accelerator</span><span>Réplication multi-sites</span><span>Migration P2V</span><span>Symantec Backup Exec</span>
+          </div>
+        </div>
+
+        <div class="glass-card spotlight skill-card reveal" data-cat="sec">
+          <div class="skill-head">
+            <h3 data-i18n="sk7_t">Réseaux &amp; Cybersécurité</h3>
+            <span class="skill-tag">Security</span>
+          </div>
+          <div class="skill-chips">
+            <span>FortiGate (HA)</span><span>Sophos Firewall</span><span>VPN SSL &amp; IPsec</span><span>WAF &amp; Proxy</span><span>Filtrage Web</span><span>Cisco (VLAN, OSPF, BGP, IP/MPLS)</span><span>AppLocker &amp; BitLocker</span><span>Windows Defender</span><span>Symantec EP</span>
+          </div>
+        </div>
+
+        <div class="glass-card spotlight skill-card reveal" data-cat="sec">
+          <div class="skill-head">
+            <h3 data-i18n="sk8_t">Supervision &amp; Automatisation</h3>
+            <span class="skill-tag">Ops</span>
+          </div>
+          <div class="skill-chips">
+            <span>PRTG Network Monitor</span><span>Microsoft SCOM</span><span>Zabbix</span><span>Bash &amp; Expect Scripting</span><span>Support N2 / N3</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="section container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow" data-i18n="exp_eyebrow">PARCOURS PROFESSIONNEL</span>
+        <h2 class="section-title" data-i18n="exp_title">Expériences &amp; Réalisations Clients</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-dot current"></div>
+          <div class="glass-card spotlight timeline-card">
+            <div class="tl-head">
+              <div>
+                <span class="tl-badge current-badge" data-i18n="tl_current">Poste actuel</span>
+                <h3 data-i18n="exp1_role">Consultant Infrastructure IT &amp; Formateur Systèmes et Réseaux</h3>
+                <div class="tl-company">Sarra-Consulting · <span data-i18n="exp1_loc">Paris, France (Remote)</span></div>
+              </div>
+              <div class="tl-date" data-i18n="exp1_date">Juin 2024 – Présent</div>
+            </div>
+            <ul class="tl-list">
+              <li data-i18n="exp1_b1"><strong>Architecture &amp; MCO Microsoft / Cloud :</strong> Conception, migration et maintien en condition opérationnelle d'infrastructures Windows Server (2016–2022), Active Directory (AD DS, AD FS, FSMO, GPO, DNS/DHCP HA), Azure (Entra ID, VNet, Storage) et Microsoft 365.</li>
+              <li data-i18n="exp1_b2"><strong>Virtualisation, PRA &amp; Gestion de Parc :</strong> Déploiement de clusters Hyper-V haute disponibilité (CSV, MPIO, réplication), automatisation OS/applicative via SCCM/MECM, MDT &amp; WSUS, et sauvegardes Veeam.</li>
+              <li data-i18n="exp1_b3"><strong>Sécurité Périmétrique &amp; Support N2/N3 :</strong> Pare-feux FortiGate &amp; Sophos en HA (VPN SSL/IPsec, filtrage Web), durcissement postes (AppLocker, BitLocker, Defender) et résolution d'incidents N2/N3 à distance.</li>
+              <li data-i18n="exp1_b4"><strong>Formateur Technique IT :</strong> Animation à distance de formations certifiantes et workshops pratiques (Windows Server, Azure, Microsoft 365, SCCM/MECM, Hyper-V, Veeam, PRTG, SCOM).</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card spotlight timeline-card">
+            <div class="tl-head">
+              <div>
+                <h3 data-i18n="exp2_role">Consultant Administrateur Systèmes &amp; Réseaux</h3>
+                <div class="tl-company">Prologic Tunisie · <span>Tunis, Tunisie</span></div>
+              </div>
+              <div class="tl-date" data-i18n="exp2_date">Décembre 2023 – Juin 2024</div>
+            </div>
+            <ul class="tl-list">
+              <li data-i18n="exp2_b1"><strong>Sauvegarde &amp; Réplication inter-sites Veeam (Client : Sergaz) :</strong> Mise en rack serveurs HPE ProLiant DL380 Gen10+ (SPP, RAID), déploiement Windows Server 2022 et architecture complète Veeam Backup &amp; Replication (Repository, Proxy, WAN Accelerator, Veeam ONE &amp; Enterprise Manager).</li>
+              <li data-i18n="exp2_b2"><strong>Cluster Haute Disponibilité VMware vSphere 8 (Client : Pharmacie Centrale) :</strong> Initialisation baie SAN HPE MSA 2060, configuration switchs SAN et RAID, déploiement ESXi &amp; vCenter v8, création du cluster et migration de VMs sans interruption.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card spotlight timeline-card">
+            <div class="tl-head">
+              <div>
+                <h3 data-i18n="exp3_role">Consultant Infrastructure IT &amp; Formateur Systèmes et Réseaux</h3>
+                <div class="tl-company">Vnext-Consulting · <span>Tunisie</span></div>
+              </div>
+              <div class="tl-date" data-i18n="exp3_date">Octobre 2019 – Décembre 2023</div>
+            </div>
+            <ul class="tl-list">
+              <li data-i18n="exp3_b1"><strong>Refonte Infrastructure &amp; Messagerie Hybride (Groupe Hygiène Industrielle) :</strong> Migration AD 2008 → 2019 (SYSVOL FRS → DFSR), Hyper-V 2012 → 2019, conversion P2V de 8 serveurs physiques via Veeam et messagerie hybride Exchange 2019 / Microsoft 365.</li>
+              <li data-i18n="exp3_b2"><strong>Restructuration AD &amp; Sécurité Multi-sites (AFRIKISOL) :</strong> Mise à niveau AD DS (2008 → 2016 via 2012 R2, DFSR), déploiement RODC sur sites distants, pare-feu FortiGate 30E et VPN clients.</li>
+              <li data-i18n="exp3_b3"><strong>Gestion de Parc SCCM/MECM &amp; Sauvegarde Veeam (HAMILA) :</strong> Déploiement SCCM/MECM, WSUS, KMS, Office 365 et sauvegarde Veeam (10 VMs + 5 serveurs physiques) avec réplication Hyper-V.</li>
+              <li data-i18n="exp3_b4"><strong>Clustering Hyper-V HA (VACPA &amp; Ministère de l'Environnement) :</strong> Clusters Hyper-V bi-nœuds avec stockage partagé iSCSI (CSV, MPIO, Quorum) et migration dynamique.</li>
+              <li data-i18n="exp3_b5"><strong>Formateur Technique (15+ cursus animés) :</strong> Azure (AZ-303), Microsoft 365 (MS-100/101), MD-100/101, Windows Server (M20740/41/42), SCCM/MECM, Hyper-V, App-V/RemoteApp, Veeam, PRTG &amp; SCOM.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card spotlight timeline-card">
+            <div class="tl-head">
+              <div>
+                <h3 data-i18n="exp4_role">Administrateur Systèmes</h3>
+                <div class="tl-company">LAMSIN (Laboratoire de Mathématiques &amp; Numérique)</div>
+              </div>
+              <div class="tl-date" data-i18n="exp4_date">Janvier 2019 – Octobre 2019</div>
+            </div>
+            <ul class="tl-list">
+              <li data-i18n="exp4_b1">Administration Windows Server (2012/2012 R2), Active Directory (AD DS, DNS, DHCP, GPO), hyperviseurs Hyper-V, réseaux, bases de données et plateformes de calcul distant.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="glass-card spotlight timeline-card">
+            <div class="tl-head">
+              <div>
+                <h3 data-i18n="exp5_role">Stagiaire Ingénieur Réseaux &amp; Automatisation (PFE)</h3>
+                <div class="tl-company">SOTETEL</div>
+              </div>
+              <div class="tl-date" data-i18n="exp5_date">Février 2018 – Juin 2018</div>
+            </div>
+            <ul class="tl-list">
+              <li data-i18n="exp5_b1">Plateforme d'automatisation et supervision d'un backbone IP/MPLS Cisco (OSPF, BGP) sous Linux Ubuntu Server, Zabbix et scripting Bash/Expect.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Dedicated Technical Trainer Showcase -->
+    <section id="training" class="section container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow" data-i18n="tr_eyebrow">TRANSMISSION &amp; WORKSHOPS</span>
+        <h2 class="section-title" data-i18n="tr_title">Formateur Technique IT — 15+ Cursus Professionnels Animés</h2>
+      </div>
+
+      <div class="training-grid">
+        <div class="glass-card spotlight train-card reveal">
+          <div class="train-cat" data-i18n="tr_c1">Cloud Azure &amp; Microsoft 365</div>
+          <ul class="train-list">
+            <li><strong>AZ-303</strong> · Microsoft Azure Architect Technologies</li>
+            <li><strong>MS-100</strong> · Microsoft 365 Identity and Services</li>
+            <li><strong>MS-101</strong> · Microsoft 365 Mobility and Security</li>
+            <li><strong>MD-100</strong> · Windows 10 / Modern Desktop Deployment</li>
+            <li><strong>MD-101</strong> · Managing Modern Desktops</li>
+          </ul>
+        </div>
+        <div class="glass-card spotlight train-card reveal">
+          <div class="train-cat" data-i18n="tr_c2">Windows Server &amp; Identités</div>
+          <ul class="train-list">
+            <li><strong>M20740</strong> · Installation, Stockage &amp; Virtualisation WS 2016</li>
+            <li><strong>M20741</strong> · Services Réseaux Windows Server 2016</li>
+            <li><strong>M20742</strong> · Gestion des Identités (AD DS / AD FS / GPO)</li>
+            <li><strong>WS &amp; Clients</strong> · Installation &amp; Administration avancée</li>
+          </ul>
+        </div>
+        <div class="glass-card spotlight train-card reveal">
+          <div class="train-cat" data-i18n="tr_c3">Virtualisation, Parc, Backup &amp; Ops</div>
+          <ul class="train-list">
+            <li><strong>SCCM / MECM</strong> · Gestion de parc &amp; télédistribution OS/Apps</li>
+            <li><strong>Hyper-V</strong> · Clustering, Live Migration &amp; Réplication VMs</li>
+            <li><strong>App-V &amp; RemoteApp</strong> · Virtualisation de postes Microsoft</li>
+            <li><strong>Veeam Suite</strong> · Backup &amp; Replication, ONE, Enterprise Manager</li>
+            <li><strong>PRTG &amp; SCOM</strong> · Supervision infrastructure &amp; réseaux</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Education -->
+    <section id="certifications" class="section container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow" data-i18n="cert_eyebrow">QUALIFICATIONS</span>
+        <h2 class="section-title" data-i18n="cert_title">Certifications &amp; Formation Académique</h2>
+      </div>
+
+      <div class="cert-grid">
+        <div class="glass-card spotlight cert-card highlight-cert reveal">
+          <div class="cert-year-badge">2024</div>
+          <h3>Microsoft Certified: MS-102</h3>
+          <p class="cert-name">Microsoft 365 Administrator Expert</p>
+          <p class="cert-id">ID : AE4A4395F2524281</p>
+        </div>
+        <div class="glass-card spotlight cert-card reveal">
+          <div class="cert-year-badge">2024</div>
+          <h3>Microsoft Certified: MS-700</h3>
+          <p class="cert-name">Teams Administrator Associate</p>
+          <p class="cert-id">ID : 792E50CD24076110</p>
+        </div>
+        <div class="glass-card spotlight cert-card reveal">
+          <div class="cert-year-badge">2024</div>
+          <h3>Huawei HCSP</h3>
+          <p class="cert-name">Huawei Certified Specialist</p>
+          <p class="cert-id">ID : 03021301825809622691409</p>
+        </div>
+        <div class="glass-card spotlight cert-card reveal">
+          <div class="cert-year-badge">2021</div>
+          <h3>Microsoft MD-100</h3>
+          <p class="cert-name">Windows Client &amp; Modern Desktop</p>
+          <p class="cert-id" data-i18n="cert_md100">Configuration &amp; Sécurisation des postes</p>
+        </div>
+        <div class="glass-card spotlight cert-card reveal">
+          <div class="cert-year-badge">2017–18</div>
+          <h3>Cisco CCNA (2, 3 &amp; 4)</h3>
+          <p class="cert-name">Routing &amp; Switching</p>
+          <p class="cert-id" data-i18n="cert_ccna">Évolutivité &amp; Connexion des réseaux</p>
+        </div>
+      </div>
+
+      <div class="edu-grid">
+        <div class="glass-card spotlight edu-card reveal">
+          <div class="edu-year">2015 – 2018</div>
+          <h3 data-i18n="edu1_deg">Diplôme d'Ingénieur en Génie Informatique — Réseaux &amp; Systèmes</h3>
+          <p>Université Libre de Tunis (ULT)</p>
+        </div>
+        <div class="glass-card spotlight edu-card reveal">
+          <div class="edu-year">2012 – 2015</div>
+          <h3 data-i18n="edu2_deg">Licence Appliquée en Technologies de l'Informatique</h3>
+          <p>ISET Bizerte</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section container">
+      <div class="glass-card spotlight contact-box reveal">
+        <div class="contact-info">
+          <span class="section-eyebrow" data-i18n="contact_eyebrow">COLLABORATION &amp; RECRUTEMENT</span>
+          <h2 class="section-title" data-i18n="contact_title">Discutons de votre infrastructure IT</h2>
+          <p class="contact-sub" data-i18n="contact_sub">Disponible pour des postes d'Ingénieur Systèmes, Réseaux &amp; Cloud Microsoft en Remote, en France, en Tunisie ou à l'international.</p>
+
+          <div class="contact-methods">
+            <div class="contact-item">
+              <span class="c-icon">✉️</span>
+              <div>
+                <div class="c-label">Email</div>
+                <a href="mailto:hajri.rahim@hotmail.com">hajri.rahim@hotmail.com</a>
+              </div>
+              <button type="button" class="copy-btn" data-copy="hajri.rahim@hotmail.com" data-i18n="copy_btn">Copier</button>
+            </div>
+            <div class="contact-item">
+              <span class="c-icon">📱</span>
+              <div>
+                <div class="c-label" data-i18n="phone_lbl">Téléphone / WhatsApp</div>
+                <a href="tel:+21655501237">+216 55 50 12 37</a>
+              </div>
+              <button type="button" class="copy-btn" data-copy="+216 55 50 12 37" data-i18n="copy_btn">Copier</button>
+            </div>
+            <div class="contact-item">
+              <span class="c-icon">📍</span>
+              <div>
+                <div class="c-label" data-i18n="loc_lbl">Localisation</div>
+                <span data-i18n="loc_val">Bizerte, Tunisie · Remote &amp; Mobilité internationale</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dl-row">
+            <a href="assets/CV_Abderrahim_Hajri_FR.pdf" download class="btn-primary-sm">📄 CV Français (PDF)</a>
+            <a href="assets/CV_Abderrahim_Hajri_EN.pdf" download class="btn-secondary-sm">📄 English Resume (PDF)</a>
+            <button type="button" id="contact-preview-btn" class="btn-secondary-sm" data-i18n="hero_btn_preview">Aperçu CV</button>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <h3 data-i18n="form_title">Envoyer un message rapide (100 % statique)</h3>
+          <input type="text" id="cf-name" required placeholder="Votre nom / Entreprise" data-ph-fr="Votre nom / Entreprise" data-ph-en="Your Name / Company" />
+          <input type="email" id="cf-email" required placeholder="Votre email" data-ph-fr="Votre email" data-ph-en="Your Email" />
+          <textarea id="cf-msg" rows="4" required placeholder="Votre message ou proposition de poste..." data-ph-fr="Votre message ou proposition de poste..." data-ph-en="Your message or job opportunity..."></textarea>
+          <div class="form-btns">
+            <button type="submit" class="btn-primary" style="flex:1; justify-content:center;" data-i18n="form_send">Envoyer par e-mail</button>
+            <button type="button" id="cf-copy-btn" class="btn-secondary" data-i18n="form_copy">Copier le message</button>
+          </div>
+          <div id="cf-feedback" class="cf-feedback"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Abderrahim HAJRI — <span data-i18n="footer_rights">Ingénieur Systèmes, Réseaux &amp; Cloud Microsoft</span></span>
+      <div class="footer-langs">Arabe (Natal) · Français (Courant) · Anglais (Technique)</div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button type="button" id="back-to-top" aria-label="Retour en haut" title="Retour en haut">↑</button>
+
+  <!-- Architecture Diagram Modal -->
+  <div class="modal-backdrop hidden" id="arch-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog glass-card">
+      <div class="modal-header">
+        <div>
+          <span class="section-eyebrow" id="arch-modal-client">Client</span>
+          <h3 id="arch-modal-title">Architecture</h3>
+        </div>
+        <button type="button" class="modal-close" id="arch-modal-close" aria-label="Fermer">✕</button>
+      </div>
+      <div class="arch-svg-wrap" id="arch-modal-svg"></div>
+      <div class="arch-modal-details" id="arch-modal-details"></div>
+    </div>
+  </div>
+
+  <!-- PDF Resume Preview Modal -->
+  <div class="modal-backdrop hidden" id="cv-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog modal-pdf glass-card">
+      <div class="modal-header">
+        <div>
+          <span class="section-eyebrow">CV ATS-FRIENDLY</span>
+          <h3 id="cv-modal-title" data-i18n="cv_modal_t">Aperçu du CV — Abderrahim HAJRI</h3>
+        </div>
+        <div class="modal-pdf-actions">
+          <button type="button" class="pill-btn" id="cv-modal-switch">FR / EN</button>
+          <a href="assets/CV_Abderrahim_Hajri_FR.pdf" download id="cv-modal-dl" class="btn-primary-sm" data-i18n="hero_btn_cv">Télécharger CV (PDF)</a>
+          <button type="button" class="modal-close" id="cv-modal-close" aria-label="Fermer">✕</button>
+        </div>
+      </div>
+      <iframe id="cv-iframe" src="" title="Aperçu CV PDF"></iframe>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
